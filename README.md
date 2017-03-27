@@ -36,3 +36,7 @@ BSD
 ## Author Information
 
 This role was created by [Maik Derstappen | MrTango](http://derico.de).
+
+## Creadits
+
+Originally based on: https://github.com/linuxhq/ansible-role-rssh
