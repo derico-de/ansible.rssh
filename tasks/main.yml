@@ -1,0 +1,17 @@
+---
+- include: install.yml
+
+- name: Insert rssh into /etc/shells
+  lineinfile:
+    dest: /etc/shells
+    line: '/usr/bin/rssh'
+
+- name: Applying rssh configuration
+  template:
+    src: rssh.conf.j2
+    dest: /etc/rssh.conf
+    owner: root
+    group: root
+    mode: 0644
+
+...
