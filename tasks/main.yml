@@ -14,4 +14,12 @@
     group: root
     mode: 0644
 
+- name: Add rssh users
+  user:
+    name={{ item.key }}
+    shell=/usr/bin/rssh
+    home={{ item.value.path }}
+  with_dict: "{{ rssh_users }}"
+  when: rssh_create_users
+
 ...
